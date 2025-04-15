@@ -10,7 +10,8 @@ class ApiService {
   }) async {
     final response = await http.get(
       Uri.parse(
-          'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'),
+        'https://opentdb.com/api.php?amount=10&category=$category&difficulty=$difficulty&type=$type',
+      ),
     );
 
     if (response.statusCode == 200) {
